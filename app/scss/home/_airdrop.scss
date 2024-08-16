@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   @include bg;
-  background-image: url("../../images/airdrop-bg.svg");
+  background-image: url("../images/airdrop-bg.svg");
   height: 1080px;
   padding-top: 35px;
   @media (max-width: 1700px) {
@@ -129,7 +129,7 @@
     padding: 67px 68px;
     font-size: 98px;
     color: $black-green;
-    background-image: url("../../images/connect.svg");
+    background-image: url("../images/connect.svg");
     transition: opacity .4s;
     @media (max-width: 1800px) {
       padding: 55px 45px;
