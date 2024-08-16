@@ -1,14 +1,84 @@
 .contacts {
   padding-bottom: 295px;
+  @media (max-width: 1450px) {
+    padding-bottom: 250px;
+  }
+  @include r($desktop) {
+    padding-bottom: 220px;
+  }
+  @include r($lg) {
+    padding-bottom: 180px;
+  }
+  @include r($tablet) {
+    padding-bottom: 140px;
+  }
+  @include r($phone) {
+    padding-bottom: 120px;
+  }
 
   &__title {
     max-width: max-content;
     margin: 80px auto 152px;
+    @media (max-width: 1450px) {
+      margin-bottom: 120px;
+    }
+    @include r($desktop) {
+      margin-bottom: 100px;
+    }
+    @include r($lg) {
+      margin-bottom: 90px;
+    }
+    @include r($tablet) {
+      margin-bottom: 80px;
+    }
+    @include r($phone) {
+      margin-bottom: 70px;
+    }
+
+    img {
+      @media (max-width: 1580px) {
+        width: auto;
+        height: 134px;
+      }
+      @media (max-width: 1500px) {
+        height: 130px;
+      }
+      @include r($desktop) {
+        height: 115px;
+      }
+      @media (max-width: 1080px) {
+        height: 105px;
+      }
+      @media (max-width: 900px) {
+        height: 95px;
+      }
+      @include r($tablet) {
+        height: 85px;
+      }
+      @media (max-width: 640px) {
+        height: 80px;
+      }
+      @include r($phone) {
+        height: 70px;
+      }
+    }
   }
 
   &__list {
     @include flex-align-center(80);
     justify-content: center;
+    @media (max-width: 1300px) {
+      gap: 60px;
+    }
+    @include r($lg) {
+      gap: 40px;
+    }
+    @media (max-width: 540px) {
+      gap: 30px;
+    }
+    @media (max-width: 410px) {
+      gap: 20px;
+    }
   }
 
   &__link {
@@ -19,6 +89,51 @@
     border: 7px solid $dark-orange;
     border-radius: 70px;
     transition: background-color .4s;
+    @media (max-width: 1300px) {
+      width: 190px;
+      height: 190px;
+      border-radius: 60px;
+      svg {
+        width: 55%;
+        height: auto;
+      }
+    }
+    @include r($desktop) {
+      width: 180px;
+      height: 180px;
+      border-radius: 50px;
+    }
+    @include r($lg) {
+      width: 150px;
+      height: 150px;
+      border-radius: 40px;
+    }
+    @media (max-width: 900px) {
+      width: 135px;
+      height: 135px;
+      border-radius: 35px;
+      border-width: 5px;
+    }
+    @include r($tablet) {
+      width: 125px;
+      height: 125px;
+    }
+    @media (max-width: 540px) {
+      width: 115px;
+      height: 115px;
+      border-radius: 30px;
+    }
+    @include r($phone) {
+      width: 100px;
+      height: 100px;
+      border-radius: 23px;
+      border-width: 4px;
+    }
+    @media (max-width: 410px) {
+      width: 90px;
+      height: 90px;
+      border-radius: 20px;
+    }
 
     &:hover {
       background-color: transparent;
@@ -26,6 +141,7 @@
 
     &:focus {
       background-color: $dark-orange;
+
       svg path {
         fill: $white;
       }

@@ -3,6 +3,19 @@
     padding: 20px 0 60px;
     border-top: 2px solid $dark-orange;
     @include flex-between-center-gap(50);
+    @media (max-width: 1300px) {
+      padding-bottom: 40px;
+    }
+    @media (max-width: 1080px) {
+      padding-bottom: 30px;
+    }
+    @media (max-width: 720px) {
+      flex-wrap: wrap;
+    }
+    @include r($sm) {
+      padding-top: 30px;
+      padding-bottom: 25px;
+    }
   }
 
   &__left, &__right {
@@ -12,18 +25,88 @@
 
   &__left {
     margin-left: 74px;
+    @media (max-width: 1300px) {
+      margin-left: 50px;
+    }
+    @include r($desktop) {
+      margin-left: 40px;
+    }
+    @media (max-width: 1040px) {
+      margin-left: 30px;
+    }
+    @media (max-width: 800px) {
+      margin-left: 0;
+    }
+    @include r($sm) {
+      max-width: max-content;
+    }
+
+    img {
+      @include r($lg) {
+        width: auto;
+        height: 145px;
+      }
+      @media (max-width: 860px) {
+        height: 135px;
+      }
+      @include r($phone) {
+        height: 125px;
+      }
+      @media (max-width: 380px) {
+        height: 120px;
+      }
+    }
   }
 
   &__right {
     display: flex;
     justify-content: flex-end;
     margin-right: 68px;
+    @media (max-width: 1300px) {
+      margin-right: 50px;
+    }
+    @include r($desktop) {
+      margin-right: 40px;
+    }
+    @media (max-width: 1040px) {
+      margin-right: 30px;
+    }
+    @media (max-width: 800px) {
+      margin-right: 0;
+    }
+    @media (max-width: 720px) {
+      justify-content: flex-start;
+    }
   }
 
   &__title {
     font-size: 104px;
     text-transform: uppercase;
     color: $dark-orange;
+    @media (max-width: 1300px) {
+      font-size: 94px;
+    }
+    @include r($desktop) {
+      font-size: 86px;
+    }
+    @media (max-width: 1080px) {
+      font-size: 78px;
+    }
+    @include r($lg) {
+      font-size: 70px;
+    }
+    @media (max-width: 860px) {
+      font-size: 64px;
+    }
+    @include r($sm) {
+      font-size: 58px;
+    }
+    @media (max-width: 420px) {
+      font-size: 52px;
+    }
+    @media (max-width: 380px) {
+      font-size: 48px;
+    }
   }
 
   &__link {
@@ -35,6 +118,22 @@
     color: $white;
     border-radius: 30px;
     transition: background-color .4s, border .4s, color .4s;
+    @include r($desktop) {
+      font-size: 40px;
+      padding: 12px 35px 14px;
+    }
+    @media (max-width: 1080px) {
+      font-size: 36px;
+      padding: 12px 30px 14px;
+      border-radius: 24px;
+    }
+    @include r($lg) {
+      font-size: 32px;
+    }
+    @include r($phone) {
+      font-size: 30px;
+      border-radius: 20px;
+    }
 
     &:hover {
       border-color: $dark-orange;
