@@ -1,0 +1,16 @@
+@import 'vendor/reset';
+@import 'vendor/fonts';
+@import 'vendor/vars';
+@import 'vendor/mixin';
+@import 'vendor/global';
+
+@import "components/menu-btn";
+@import "components/footer";
+@import "components/header";
+@import "components/title-section";
+
+@import "home/home";
+@import "home/about";
+@import "home/tokenomics";
+@import "home/airdrop";
+@import "home/contacts";

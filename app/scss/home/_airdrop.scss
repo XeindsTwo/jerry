@@ -1,0 +1,250 @@
+.airdrop {
+  position: relative;
+  overflow: hidden;
+  @include bg;
+  background-image: url("../../images/airdrop-bg.svg");
+  height: 1080px;
+  padding-top: 35px;
+  @media (max-width: 1700px) {
+    height: 1000px;
+  }
+  @media (max-width: 1550px) {
+    height: 900px;
+  }
+  @media (max-width: 1320px) {
+    height: 820px;
+  }
+  @include r($desktop) {
+    height: 740px;
+  }
+  @include r($lg) {
+    height: 670px;
+  }
+  @include r($tablet) {
+    height: 620px;
+  }
+  @media (max-width: 700px) {
+    height: 590px;
+  }
+  @media (max-width: 535px) {
+    height: 580px;
+  }
+  @media (max-width: 510px) {
+    height: 560px;
+  }
+
+  &__title {
+    margin: 0 auto;
+    max-width: max-content;
+    position: relative;
+    z-index: 30;
+
+    img {
+      @media (max-width: 1580px) {
+        width: auto;
+        height: 157px;
+      }
+      @media (max-width: 1500px) {
+        height: 150px;
+      }
+      @media (max-width: 1400px) {
+        height: 140px;
+      }
+      @media (max-width: 1200px) {
+        height: 130px;
+      }
+      @media (max-width: 1080px) {
+        height: 120px;
+      }
+      @media (max-width: 900px) {
+        height: 110px;
+      }
+      @include r($tablet) {
+        height: 100px;
+      }
+      @media (max-width: 640px) {
+        height: 90px;
+      }
+      @include r($phone) {
+        height: 75px;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 14px;
+    bottom: 0;
+    @media (max-width: 1700px) {
+      width: auto;
+      height: 840px;
+    }
+    @media (max-width: 1550px) {
+      height: 760px;
+    }
+    @media (max-width: 1450px) {
+      height: 690px;
+    }
+    @media (max-width: 1320px) {
+      height: 620px;
+    }
+    @include r($desktop) {
+      height: 550px;
+    }
+    @media (max-width: 1100px) {
+      height: 520px;
+    }
+    @include r($lg) {
+      height: 470px;
+    }
+    @media (max-width: 830px) {
+      height: 440px;
+    }
+    @include r($tablet) {
+      height: 400px;
+    }
+    @media (max-width: 680px) {
+      height: 380px;
+    }
+    @include r($sm) {
+      right: -40px;
+    }
+    @media (max-width: 530px) {
+      right: -90px;
+    }
+    @include r($phone) {
+      right: -115px;
+    }
+    @media (max-width: 435px) {
+      right: -135px;
+    }
+  }
+
+  &__btn {
+    @include bg;
+    position: absolute;
+    z-index: 35;
+    top: 300px;
+    margin-left: 310px;
+    padding: 67px 68px;
+    font-size: 98px;
+    color: $black-green;
+    background-image: url("../../images/connect.svg");
+    transition: opacity .4s;
+    @media (max-width: 1800px) {
+      padding: 55px 45px;
+      font-size: 92px;
+    }
+    @media (max-width: 1600px) {
+      padding: 56px 54px;
+      font-size: 86px;
+    }
+    @media (max-width: 1550px) {
+      font-size: 80px;
+      padding: 53px 51px;
+      top: 260px;
+      margin-left: 360px;
+    }
+    @media (max-width: 1480px) {
+      margin-left: 280px;
+    }
+    @media (max-width: 1450px) {
+      top: 300px;
+    }
+    @media (max-width: 1370px) {
+      font-size: 70px;
+      padding: 50px 55px;
+    }
+    @media (max-width: 1320px) {
+      margin-left: 270px;
+      top: 290px;
+      font-size: 64px;
+      padding: 47px 52px;
+    }
+    @media (max-width: 1240px) {
+      margin-left: 230px;
+    }
+    @include r($desktop) {
+      font-size: 54px;
+      padding: 40px 46px;
+      margin-left: 250px;
+      top: 270px;
+    }
+    @media (max-width: 1100px) {
+      margin-left: 210px;
+      font-size: 50px;
+      padding: 38px 44px;
+    }
+    @media (max-width: 1030px) {
+      margin-left: 180px;
+    }
+    @include r($lg) {
+      padding: 36px 46px;
+      top: 250px;
+      font-size: 44px;
+      margin-left: 220px;
+    }
+    @media (max-width: 960px) {
+      margin-left: 200px;
+    }
+    @media (max-width: 920px) {
+      margin-left: 150px;
+    }
+    @media (max-width: 880px) {
+      margin-left: 100px;
+    }
+    @media (max-width: 830px) {
+      top: 260px;
+    }
+    @media (max-width: 810px) {
+      margin-left: 70px;
+    }
+    @include r($tablet) {
+      top: 240px;
+      margin-left: 90px;
+      font-size: 40px;
+      padding: 33px 43px;
+    }
+    @media (max-width: 740px) {
+      margin-left: 60px;
+      font-size: 36px;
+      top: 250px;
+      padding: 31px 42px;
+    }
+    @media (max-width: 700px) {
+      top: 230px;
+    }
+    @media (max-width: 680px) {
+      margin-left: 40px;
+      top: 240px;
+      font-size: 34px;
+      padding: 29px 40px;
+    }
+    @media (max-width: 635px) {
+      margin-left: 20px;
+    }
+    @media (max-width: 570px) {
+      font-size: 30px;
+      padding: 27px 38px;
+      top: 255px;
+    }
+    @media (max-width: 530px) {
+      top: 245px;
+    }
+    @media (max-width: 510px) {
+      top: 230px;
+    }
+    @include r($phone) {
+      margin-left: 0;
+    }
+    @media (max-width: 410px) {
+      font-size: 28px;
+      padding: 24px 32px;
+      margin-left: -5px;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+.about {
+  position: relative;
+
+  &__inner {
+    @include flex-align-center(75);
+    @media (max-width: 1400px) {
+      gap: 50px;
+    }
+    @include r($lg) {
+      gap: 40px;
+    }
+    @include r($tablet) {
+      margin: 80px 0;
+      flex-direction: column;
+      padding: 0 25px;
+      gap: 50px;
+    }
+    @include r($phone) {
+      margin: 70px 0;
+      padding: 0 15px;
+      gap: 40px;
+    }
+  }
+
+  &__img {
+    @include objectCoverBg;
+    @media (max-width: 1680px) {
+      width: auto;
+      height: 1000px;
+    }
+    @media (max-width: 1580px) {
+      height: 960px;
+    }
+    @media (max-width: 1400px) {
+      height: 860px;
+    }
+    @include r($desktop) {
+      height: 710px;
+    }
+    @media (max-width: 1060px) {
+      margin-left: -80px;
+    }
+    @media (max-width: 950px) {
+      height: 630px;
+    }
+    @media (max-width: 810px) {
+      height: 560px;
+    }
+    @include r($tablet) {
+      display: none;
+    }
+
+    &.mobile {
+      display: none;
+      @include r($tablet) {
+        height: 440px;
+        display: block;
+        margin-left: 0;
+      }
+      @media (max-width: 640px) {
+        height: 420px;
+      }
+      @include r($sm) {
+        height: 390px;
+      }
+      @media (max-width: 520px) {
+        height: 360px;
+      }
+      @include r($phone) {
+        height: 330px;
+      }
+      @media (max-width: 400px) {
+        height: 310px;
+      }
+    }
+  }
+
+  &__content {
+    @include r($tablet) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @media (max-width: 1580px) {
+      margin-bottom: 30px;
+    }
+    @media (max-width: 810px) {
+      margin-bottom: 20px;
+    }
+    @include r($tablet) {
+      margin-bottom: 25px;
+    }
+
+    img {
+      @media (max-width: 1580px) {
+        width: auto;
+        height: 124px;
+      }
+      @media (max-width: 1500px) {
+        height: 114px;
+      }
+      @media (max-width: 1400px) {
+        height: 104px;
+      }
+      @media (max-width: 1280px) {
+        height: 96px;
+      }
+      @include r($desktop) {
+        height: 86px;
+      }
+      @media (max-width: 1080px) {
+        height: 78px;
+      }
+      @media (max-width: 900px) {
+        height: 70px;
+      }
+      @media (max-width: 860px) {
+        height: 65px;
+      }
+      @media (max-width: 810px) {
+        height: 58px;
+      }
+      @media (max-width: 640px) {
+        height: 52px;
+      }
+      @include r($phone) {
+        height: 48px;
+      }
+    }
+  }
+
+  &__text {
+    color: $bright-green;
+    max-width: 925px;
+    width: 100%;
+    font-size: 58px;
+    line-height: 1.2;
+    padding-right: 15px;
+    @media (max-width: 1680px) {
+      font-size: 52px;
+    }
+    @media (max-width: 1580px) {
+      font-size: 48px;
+    }
+    @media (max-width: 1500px) {
+      font-size: 46px;
+    }
+    @media (max-width: 1400px) {
+      font-size: 42px;
+    }
+    @media (max-width: 1280px) {
+      font-size: 38px;
+    }
+    @include r($desktop) {
+      font-size: 34px;
+    }
+    @media (max-width: 1060px) {
+      font-size: 32px;
+    }
+    @media (max-width: 950px) {
+      font-size: 30px;
+    }
+    @media (max-width: 860px) {
+      font-size: 28px;
+    }
+    @include r($tablet) {
+      padding-right: 0;
+    }
+    @media (max-width: 640px) {
+      font-size: 26px;
+    }
+    @include r($phone) {
+      font-size: 24px;
+    }
+  }
+}

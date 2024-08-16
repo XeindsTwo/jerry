@@ -1,0 +1,25 @@
+.home {
+  @include bg;
+  background-position: top;
+  height: 915px;
+  overflow: hidden;
+  background-image: url("../../images/banner-bg.png");
+
+  &__inner {
+    position: relative;
+    z-index: 20;
+  }
+
+  &__boy {
+    @include top50;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 271px;
+  }
+}
