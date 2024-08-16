@@ -4,13 +4,74 @@
   padding: 30px 0 18px;
   background-color: $light-yellow;
   filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.24));
+  @media (max-width: 1440px) {
+    padding: 20px 0;
+  }
+  @media (max-width: 1100px) {
+    padding: 18px 0;
+  }
+  @include r($phone) {
+    padding: 16px 0;
+  }
 
   &__inner {
+    position: relative;
+    z-index: 26;
     @include flex-between-center-gap(30);
+    @include r($lg) {
+      gap: 25px;
+    }
+  }
+
+  &__logo {
+    width: 130px;
+    height: 130px;
+    @media (max-width: 1240px) {
+      width: 120px;
+      height: 120px;
+    }
+    @include r($lg) {
+      width: 110px;
+      height: 110px;
+    }
+    @include r($tablet) {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &__nav {
+    @include r($lg) {
+      display: none;
+    }
+
+    &.mobile {
+      display: none;
+      @include r($lg) {
+        @include flex-column(40);
+        align-items: flex-start;
+      }
+    }
   }
 
   &__list {
     @include flex-align-center(90);
+    @media (max-width: 1560px) {
+      gap: 70px;
+    }
+    @media (max-width: 1440px) {
+      gap: 55px;
+    }
+    @media (max-width: 1240px) {
+      gap: 50px;
+    }
+    @media (max-width: 1140px) {
+      gap: 40px;
+    }
+    @include r($lg) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__link {
@@ -20,6 +81,30 @@
     border-radius: 6px;
     outline: 2px solid transparent;
     transition: color .4s, outline-color .4s;
+    @media (max-width: 1560px) {
+      font-size: 50px;
+    }
+    @media (max-width: 1360px) {
+      font-size: 46px;
+    }
+    @media (max-width: 1240px) {
+      font-size: 44px;
+    }
+    @include r($desktop) {
+      font-size: 42px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 40px;
+    }
+    @media (max-width: 1040px) {
+      font-size: 38px;
+    }
+    @include r($lg) {
+      font-size: 42px;
+    }
+    @media (max-width: 400px) {
+      font-size: 38px;
+    }
 
     &:hover {
       color: $dark-green;
@@ -38,6 +123,33 @@
     padding: 18px 30px;
     font-size: 42px;
     transition: background-color .4s, color .4s;
+    @media (max-width: 1400px) {
+      font-size: 38px;
+      padding: 16px 28px;
+    }
+    @media (max-width: 1360px) {
+      font-size: 36px;
+      padding: 15px 27px;
+    }
+    @media (max-width: 1100px) {
+      font-size: 34px;
+      padding: 13px 26px;
+    }
+    @media (max-width: 1040px) {
+      font-size: 32px;
+    }
+    @include r($lg) {
+      margin-left: auto;
+      font-size: 30px;
+      padding: 11px 25px;
+    }
+    @include r($phone) {
+      display: none;
+      font-size: 36px;
+    }
+    @media (max-width: 400px) {
+      font-size: 34px;
+    }
 
     &:hover {
       background-color: transparent;
@@ -47,6 +159,43 @@
     &:focus {
       background-color: $white;
       color: $black;
+    }
+
+    &.mobile {
+      display: none;
+      @include r($phone) {
+        display: flex;
+        margin-left: 0;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__mobile {
+    @include flex-column(30);
+    padding: 170px 25px 30px;
+    display: none;
+    position: fixed;
+    z-index: 25;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    transform: translateX(100%);
+    height: 100vh;
+    transition: transform .7s ease-in-out;
+    @media (max-width: 992px) {
+      display: flex;
+    }
+    @media (max-width: 870px) {
+      padding: 170px 20px 30px;
+    }
+    @include r($sm) {
+      padding: 170px 17px 30px;
+    }
+
+    &.active {
+      transform: translateX(0);
     }
   }
 }
